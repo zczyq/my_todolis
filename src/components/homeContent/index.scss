@@ -1,0 +1,24 @@
+#CanteenOne {
+    width: 100%;
+    height: 100%;
+    ul {
+        border-radius: 0.5rem;
+        list-style: none;
+        background-color: #fff;
+        li {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            border-bottom: 0.1rem solid #eee;
+            img {
+                width: 6rem;
+                height: 6rem;
+                border-radius: 0.3rem;
+                .img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
