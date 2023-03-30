@@ -9,13 +9,22 @@ const instance = axios.create({
 // 配置请求拦截器
 instance.interceptors.request.use(config=>{
     // 携带token
+    config.headers.token = localStorage.getItem('token');
     return config
 })
 // 配置响应拦截器
 instance.interceptors.response.use(
     // 我只要收到了重新登录的信息就重定向到登录页面
     response=>{
-        return response.data
+        // token错误或过期，重新登陆（使用redux管理状态）
+        if(response.data.msg === "账号认证失败或登录已过期"){
+            // 清除本地存储
+            localStorage.clear()
+            window.location.href = `${window.location.origin}/login`
+        }
+        else {
+            return response.data
+        }
     },
     error=>{
         console.log(error.message);

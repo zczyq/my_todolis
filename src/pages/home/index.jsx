@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HOCisLogin from '@/hooks/isLogin';
 import { Tabs } from 'antd';
 import HomeContent from '@/components/homeContent';
+import './index.scss'
 
 const Home = () => {
     const [key,steKey] = useState('1')

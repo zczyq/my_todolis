@@ -1,6 +1,7 @@
 import Login from "@/pages/login";
 import Home from "@/pages/home/index";
 import Register from "@/pages/register/index";
+import SearchShop from "@/pages/searchShop";
 const routes = [
     {
         path:'home',
@@ -13,6 +14,10 @@ const routes = [
     {
         path:'/register',
         element:<Register/>
+    },
+    {
+        path:'/searchShop',
+        element:<SearchShop/>
     },
     {
         path:'/',

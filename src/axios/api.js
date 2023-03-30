@@ -12,3 +12,7 @@ export const register = (username,password)=>{
 export const findCurAdrShops = (address)=>{
     return request({url:`/shops/shop/${address}`,method:'GET'})
 }
+
+export const search = (shopName)=>{
+    return request({url:`/shops/search?shopName=${shopName}`,method:'GET'})
+}

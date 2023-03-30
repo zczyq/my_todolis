@@ -35,7 +35,8 @@ const UserForm = (props) => {
             // enter home
             navigate('/home')
             // 登录成功，保存返回的token
-            localStorage.setItem('token',res.data)
+            localStorage.setItem('token',res.data.token)
+            localStorage.setItem('username',res.data.username)
         }else {
             // 登陆失败，用户名或密码错误
             alert(res.msg)
